@@ -1,0 +1,15 @@
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\bin\Debug\net6.0\hi_low_game.exe
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\bin\Debug\net6.0\hi_low_game.deps.json
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\bin\Debug\net6.0\hi_low_game.runtimeconfig.json
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\bin\Debug\net6.0\hi_low_game.dll
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\bin\Debug\net6.0\hi_low_game.pdb
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.csproj.AssemblyReference.cache
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.AssemblyInfoInputs.cache
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.AssemblyInfo.cs
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.csproj.CoreCompileInputs.cache
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.dll
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\refint\hi_low_game.dll
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.pdb
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\hi_low_game.genruntimeconfig.cache
+C:\Users\toby3\Desktop\school_spring_2022\CSE 210\Module 2\hi_low_game\hi_low_game\obj\Debug\net6.0\ref\hi_low_game.dll
