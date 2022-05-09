@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace hi_low_game
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Director director = new Director();
+        }
+    }
+}
