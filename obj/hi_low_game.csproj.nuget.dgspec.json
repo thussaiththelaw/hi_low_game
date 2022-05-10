@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\toby3\\Desktop\\school_spring_2022\\CSE 210\\Module 2\\hi_low_game\\hi_low_game\\hi_low_game.csproj": {}
+    "C:\\Users\\tjleg\\Desktop\\CSE210\\Week4\\TeamProject-HigherOrLower\\hi_low_game\\hi_low_game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\toby3\\Desktop\\school_spring_2022\\CSE 210\\Module 2\\hi_low_game\\hi_low_game\\hi_low_game.csproj": {
+    "C:\\Users\\tjleg\\Desktop\\CSE210\\Week4\\TeamProject-HigherOrLower\\hi_low_game\\hi_low_game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\toby3\\Desktop\\school_spring_2022\\CSE 210\\Module 2\\hi_low_game\\hi_low_game\\hi_low_game.csproj",
+        "projectUniqueName": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week4\\TeamProject-HigherOrLower\\hi_low_game\\hi_low_game.csproj",
         "projectName": "hi_low_game",
-        "projectPath": "C:\\Users\\toby3\\Desktop\\school_spring_2022\\CSE 210\\Module 2\\hi_low_game\\hi_low_game\\hi_low_game.csproj",
-        "packagesPath": "C:\\Users\\toby3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\toby3\\Desktop\\school_spring_2022\\CSE 210\\Module 2\\hi_low_game\\hi_low_game\\obj\\",
+        "projectPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week4\\TeamProject-HigherOrLower\\hi_low_game\\hi_low_game.csproj",
+        "packagesPath": "C:\\Users\\tjleg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week4\\TeamProject-HigherOrLower\\hi_low_game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\toby3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tjleg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
