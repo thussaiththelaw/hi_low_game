@@ -5,13 +5,14 @@ namespace hi_low_game
         public void StartGame()
         {
             Deck deck = new Deck();
-            deck.initializeCardsArray();            
+            deck.initializeCardsArray();    
+            int initialCardValue = deck.Draw_Card(); //picks an initial card value - Tyler        
             int points = 300;
-
+            Console.WriteLine(initialCardValue);//TEST CODE
             bool keepPlaying = true;
             do
             {
-                (bool RecievePoints, keepPlaying) = GetInputs();
+                (bool RecievePoints, keepPlaying,initialCardValue) = GetInputs(initialCardValue);
                 (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
@@ -19,19 +20,19 @@ namespace hi_low_game
 //get inputs from the user
 
         
-        public static (bool,bool) GetInputs()
+        public static (bool,bool,int) GetInputs(int initialCard)
         {
             // needs to be able to set the inital card so that it's not in the loop
             Deck deck = new Deck();
             deck.initializeCardsArray();
-            int initialCardValue = deck.Draw_Card(); //picks an initial card value - Tyler
+            //picks an initial card value - Tyler
             int CardToGuess = deck.Draw_Card(); // TALK TO DOUG ABOUT HOW TO INTEGRATE THIS WITH HIS CODE.
 
-            Console.WriteLine(initialCardValue);//TEST CODE
+            
             Console.WriteLine(CardToGuess); //TEST CODE
 
 
-            Console.WriteLine($"The Card is {initialCardValue}"); //Print Card Value
+            Console.WriteLine($"The Card is {initialCard}"); //Print Card Value
             Console.WriteLine("Higher/Lower? [h/l/quit]"); //gets user input for card value
             string PlayerGuess = Console.ReadLine();
 
@@ -41,17 +42,17 @@ namespace hi_low_game
             }
 
             
-            if ((PlayerGuess.ToLower() == "h" && CardToGuess < initialCardValue)||(PlayerGuess.ToLower() == "l" && CardToGuess > initialCardValue)) {
+            if ((PlayerGuess.ToLower() == "h" && CardToGuess > initialCard)||(PlayerGuess.ToLower() == "l" && CardToGuess < initialCard)) {
                 Console.WriteLine("You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
-                return (true,true);
+                return (true,true,CardToGuess);
             }
             else if (PlayerGuess.ToLower()=="quit"){
                 Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
-                return (false,false); // Sending another False to keepPlaying will Continue to run the program.
+                return (false,false,CardToGuess); // Sending another False to keepPlaying will Continue to run the program.
             }
             else{
                 Console.WriteLine("You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
-                return (false,true);
+                return (false,true,CardToGuess);
             }
         }
 
