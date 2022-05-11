@@ -12,7 +12,7 @@ namespace hi_low_game
 
             do
             {
-                (bool RecievePoints, keepPlaying,initialCardValue) = GetInputs(initialCardValue,deck);
+                (bool RecievePoints,initialCardValue) = GetInputs(initialCardValue,deck); // Gets to see if the player is correct, if 
                 (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
@@ -20,16 +20,14 @@ namespace hi_low_game
 //get inputs from the user
 
         
-        public static (bool,bool,int) GetInputs(int initialCard, Deck deck)
+        public static (bool,int) GetInputs(int initialCard, Deck deck)
         {
             
-            int CardToGuess = deck.Draw_Card(); // TALK TO DOUG ABOUT HOW TO INTEGRATE THIS WITH HIS CODE.
-
-            
-
+            int CardToGuess = deck.Draw_Card(); // Gets Card
 
             Console.WriteLine($"The Card is {initialCard}"); //Print Card Value
             Console.WriteLine("Higher/Lower? [h/l/quit]"); //gets user input for card value
+
             string PlayerGuess = Console.ReadLine();
 
 
@@ -40,15 +38,15 @@ namespace hi_low_game
             
             if ((PlayerGuess.ToLower() == "h" && CardToGuess > initialCard)||(PlayerGuess.ToLower() == "l" && CardToGuess < initialCard)) {
                 Console.WriteLine("You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
-                return (true,true,CardToGuess);
+                return (true,CardToGuess);
             }
             else if (PlayerGuess.ToLower()=="quit"){
                 Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
-                return (false,false,CardToGuess); // Sending another False to keepPlaying will Continue to run the program.
+                return (false,CardToGuess); // Sending another False to keepPlaying will Continue to run the program.
             }
             else{
                 Console.WriteLine("You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
-                return (false,true,CardToGuess);
+                return (false,CardToGuess);
             }
         }
 
