@@ -23,6 +23,7 @@ namespace hi_low_game
         {
             // needs to be able to set the inital card so that it's not in the loop
             Deck deck = new Deck();
+            deck.initializeCardsArray();
             int initialCardValue = deck.Draw_Card(); //picks an initial card value - Tyler
             int CardToGuess = deck.Draw_Card(); // TALK TO DOUG ABOUT HOW TO INTEGRATE THIS WITH HIS CODE.
 
