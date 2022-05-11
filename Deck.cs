@@ -30,9 +30,9 @@ namespace hi_low_game
             }
 
             int card = cardsArray[(cardsArray.Length)-1]; // selects current highest array index as card to be drawn - Doug
-            cardsArray_Length = cardsArray_Length-1; // reduces the size of the deck by 1. - Doug
+            cardsArray_Length -= 1; // reduces the size of the deck by 1. - Doug
             Array.Resize(ref cardsArray, cardsArray_Length); // resizes the deck of cards array to match the current number of remaining cards. - Doug
-            Console.WriteLine($"Array length: {cardsArray.Length}"); // test code. - Doug
+            // Console.WriteLine($"Array length: {cardsArray.Length}"); // test code. - Doug
             return card; // returns the card value as an int - Doug
         }
 
