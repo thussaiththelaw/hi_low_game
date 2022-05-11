@@ -12,7 +12,7 @@ namespace hi_low_game
             bool keepPlaying = true;
             do
             {
-                (bool RecievePoints, keepPlaying,initialCardValue) = GetInputs(initialCardValue);
+                (bool RecievePoints, keepPlaying,initialCardValue) = GetInputs(initialCardValue,deck);
                 (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
@@ -20,11 +20,11 @@ namespace hi_low_game
 //get inputs from the user
 
         
-        public static (bool,bool,int) GetInputs(int initialCard)
+        public static (bool,bool,int) GetInputs(int initialCard, Deck deck)
         {
             // needs to be able to set the inital card so that it's not in the loop
-            Deck deck = new Deck();
-            deck.initializeCardsArray();
+            //Deck deck = new Deck();
+            //deck.initializeCardsArray();
             //picks an initial card value - Tyler
             int CardToGuess = deck.Draw_Card(); // TALK TO DOUG ABOUT HOW TO INTEGRATE THIS WITH HIS CODE.
 
