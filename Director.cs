@@ -45,8 +45,8 @@ namespace hi_low_game
                 return (true,true);
             }
             else if (PlayerGuess.ToLower()=="quit"){
-               // Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
-                return (false,false);
+                Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
+                return (false,false); // Sending another False to keepPlaying will Continue to run the program.
             }
             else{
                 Console.WriteLine("You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
@@ -69,7 +69,7 @@ namespace hi_low_game
             
             
             TotalPoints = TotalPoints + AddPoints;
-            if(TotalPoints == 0){
+            if(TotalPoints <= 0){
                 Console.WriteLine("You Lose");
                 ContinuePlayin = false;
                     //ends the program and sends the error code zero to the system. - Tyler - Possible better code 
