@@ -11,21 +11,20 @@ namespace hi_low_game
             bool keepPlaying = true;
             do
             {
-                bool RecievePoints = GetInputs();
-                points = DoUpdates(RecievePoints,points);
+                (bool RecievePoints, keepPlaying) = GetInputs();
+                (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
         }
 //get inputs from the user
 
         
-        public bool GetInputs()
+        public static (bool,bool) GetInputs()
         {
             // needs to be able to set the inital card so that it's not in the loop
             Deck deck = new Deck();
             int initialCardValue = deck.Draw_Card(); //picks an initial card value - Tyler
             int CardToGuess = deck.Draw_Card(); // TALK TO DOUG ABOUT HOW TO INTEGRATE THIS WITH HIS CODE.
-
 
             Console.WriteLine(initialCardValue);//TEST CODE
             Console.WriteLine(CardToGuess); //TEST CODE
@@ -43,22 +42,23 @@ namespace hi_low_game
             
             if ((PlayerGuess.ToLower() == "h" && CardToGuess < initialCardValue)||(PlayerGuess.ToLower() == "l" && CardToGuess > initialCardValue)) {
                 Console.WriteLine("You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
-                return true;
+                return (true,true);
             }
             else if (PlayerGuess.ToLower()=="quit"){
-                Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
-                return false;
+               // Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
+                return (false,false);
             }
             else{
                 Console.WriteLine("You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
-                return false;
+                return (false,true);
             }
         }
 
 
 
-        public int DoUpdates(bool RecievePoints, int TotalPoints)
+        public static (int,bool)  DoUpdates(bool RecievePoints, int TotalPoints)
         {
+            bool ContinuePlayin = true;
             int AddPoints;
             if (RecievePoints == true){
                 AddPoints = 100;
@@ -69,11 +69,12 @@ namespace hi_low_game
             
             
             TotalPoints = TotalPoints + AddPoints;
-            if(TotalPoints ==0){
+            if(TotalPoints == 0){
                 Console.WriteLine("You Lose");
-                Environment.Exit(0);    //ends the program and sends the error code zero to the system. - Tyler - Possible better code 
+                ContinuePlayin = false;
+                    //ends the program and sends the error code zero to the system. - Tyler - Possible better code 
             }
-            return TotalPoints;
+            return (TotalPoints,ContinuePlayin);
         }
 
 
