@@ -16,6 +16,7 @@ namespace hi_low_game
         // Defines the initial set of cards in the deck - Sam
         public void initializeCardsArray(){
             cardsArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+            Deck_Shuffle(); // shuffles deck of cards - Doug
         }
         public int[] Deck_Shuffle(){ // shuffles deck
             cardsArray = cardsArray.OrderBy(x => random.Next()).ToArray(); // randomly rearranges the cardsArray values. - Doug
@@ -27,11 +28,11 @@ namespace hi_low_game
                initializeCardsArray(); // reinitializes deck - Doug
                cardsArray_Length = 13; // resets current deck size - Doug
             }
-            Deck_Shuffle(); // shuffles deck of cards - Doug
+
             int card = cardsArray[(cardsArray.Length)-1]; // selects current highest array index as card to be drawn - Doug
-            cardsArray_Length = cardsArray_Length-1; // reduces the size of the deck by 1. - Doug
+            cardsArray_Length -= 1; // reduces the size of the deck by 1. - Doug
             Array.Resize(ref cardsArray, cardsArray_Length); // resizes the deck of cards array to match the current number of remaining cards. - Doug
-            Console.WriteLine($"Array length: {cardsArray.Length}"); // test code. - Doug
+            // Console.WriteLine($"Array length: {cardsArray.Length}"); // test code. - Doug
             return card; // returns the card value as an int - Doug
         }
 
