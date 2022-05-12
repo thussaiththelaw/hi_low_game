@@ -12,7 +12,7 @@ namespace hi_low_game
 
             do
             {
-                (bool RecievePoints,initialCardValue) = GetInputs(initialCardValue,deck); // Gets to see if the player is correct, if 
+                (bool RecievePoints,initialCardValue) = GetInputs(initialCardValue,deck); // Gets to see if the player is correct, Sets next card value to the CardToGuess.
                 (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
@@ -38,7 +38,7 @@ namespace hi_low_game
             
             if ((PlayerGuess.ToLower() == "h" && CardToGuess > initialCard)||(PlayerGuess.ToLower() == "l" && CardToGuess < initialCard)) {
                 Console.WriteLine("You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
-                return (true,CardToGuess);
+                return (true,CardToGuess); 
             }
             else if (PlayerGuess.ToLower()=="quit"){
                 Environment.Exit(0);  // quits the program, sends the error code 0 to the terminal. - Tyler- Better Code possible.
@@ -68,7 +68,6 @@ namespace hi_low_game
             if(TotalPoints <= 0){
                 Console.WriteLine("You Lose");
                 ContinuePlayin = false;
-                    //ends the program and sends the error code zero to the system. - Tyler - Possible better code 
             }
             return (TotalPoints,ContinuePlayin);
         }
