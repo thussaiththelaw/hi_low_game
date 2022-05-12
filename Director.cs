@@ -26,7 +26,7 @@ namespace hi_low_game
             int CardToGuess = deck.Draw_Card(); // Gets Card
 
             Console.WriteLine($"The Card is {initialCard}"); //Print Card Value
-            Console.WriteLine("Higher/Lower? [h/l/quit]"); //gets user input for card value
+            Console.Write("Higher/Lower? [h/l/quit]: "); //gets user input for card value
 
             string PlayerGuess = Console.ReadLine();
 
