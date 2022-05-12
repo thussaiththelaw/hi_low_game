@@ -37,7 +37,7 @@ namespace hi_low_game
 
             
             if ((PlayerGuess.ToLower() == "h" && CardToGuess > initialCard)||(PlayerGuess.ToLower() == "l" && CardToGuess < initialCard)) {
-                Console.WriteLine("You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
+                Console.WriteLine($"The card was {CardToGuess} - You got it right!"); // Checks to see which letter the user inputed and to see if they got it correct. - Tyler
                 return (true,CardToGuess); 
             }
             else if (PlayerGuess.ToLower()=="quit"){
@@ -45,7 +45,7 @@ namespace hi_low_game
                 return (false,CardToGuess); // Sending another False to keepPlaying will Continue to run the program.
             }
             else{
-                Console.WriteLine("You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
+                Console.WriteLine($"The card was {CardToGuess} - You got it Wrong");  //if anything else is added it will it will return false. Their Guess is incorrect - Tyler
                 return (false,CardToGuess);
             }
         }
@@ -76,7 +76,7 @@ namespace hi_low_game
 
         public void DoOutputs(int points)
         {
-            Console.WriteLine($"points: {points}");
+            Console.WriteLine($"points: {points}\n");
             return;
         }
 
