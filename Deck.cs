@@ -17,6 +17,7 @@ namespace hi_low_game
         public void initializeCardsArray(){
             cardsArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
             Deck_Shuffle(); // shuffles deck of cards - Doug
+            Console.WriteLine("-Reshuffling Deck-");
         }
         public int[] Deck_Shuffle(){ // shuffles deck
             cardsArray = cardsArray.OrderBy(x => random.Next()).ToArray(); // randomly rearranges the cardsArray values. - Doug
