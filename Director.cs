@@ -16,6 +16,8 @@ namespace hi_low_game
                 (points,keepPlaying) = DoUpdates(RecievePoints,points);
                 DoOutputs(points);
             } while (keepPlaying);
+            Console.WriteLine("Thanks for playing!");
+            Console.WriteLine($"You finished with {points} points!");
         }
 //get inputs from the user
 
